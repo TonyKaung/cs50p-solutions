@@ -34,6 +34,7 @@ def main():
     print(f"Score: {score}")
 
 def get_level():
+    # try until the user inputs a valid level
     while True:
         try:
             level = int(input("Level: "))
