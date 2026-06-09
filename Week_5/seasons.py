@@ -17,7 +17,9 @@ def main():
 
 # returns the number of minutes since the given date
 # assumes start and end is at midnight
-def minutes_since(dateOfBirth, today=date.today()):
+def minutes_since(dateOfBirth, today=None):
+    if today is None:
+        today = date.today()
     days = today - dateOfBirth
     return days.days * 24 * 60
 
