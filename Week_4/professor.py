@@ -19,16 +19,13 @@ def main():
                     break
                 else:
                     print("EEE")
-                    count += 1
-                    # if the user has tried 3 times, show the correct answer
-                    if count == 3:
-                        print(f"{x} + {y} = {x + y}")
             except ValueError:
                 print("EEE")
-                count += 1
-                # if the user has tried 3 times, show the correct answer
-                if count == 3:
-                    print(f"{x} + {y} = {x + y}")
+            count += 1
+
+        # if the user has tried 3 times, show the correct answer
+        if count == 3:
+            print(f"{x} + {y} = {x + y}")
 
     # print the final score
     print(f"Score: {score}")
@@ -44,7 +41,12 @@ def get_level():
             pass
 
 def generate_integer(level):
-    return random.randint(0, 10 * level)
+    if level == 1:
+        return random.randint(0, 9)
+    elif level == 2:
+        return random.randint(10, 99)
+    elif level == 3:
+        return random.randint(100, 999)
 
 if __name__ == "__main__":
     main()
