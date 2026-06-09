@@ -1,5 +1,8 @@
 camel_input = input("camelCase: ")
+result = []
 for i in camel_input:
     if i.isupper():
-        camel_input = camel_input.replace(i, "_" + i.lower())
-print("snake_output:", camel_input)
+        result.append("_" + i.lower())
+    else:
+        result.append(i)
+print("snake_case:", "".join(result))
