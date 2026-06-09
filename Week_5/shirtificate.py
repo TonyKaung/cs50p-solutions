@@ -13,7 +13,7 @@ def create_shirtificate(name):
     pdf.set_auto_page_break(auto=False)
 
     # ── Background ──────────────────────────────────────────────────────────
-    pdf.set_fill_color(255, 255, 255)          # dark charcoal
+    pdf.set_fill_color(255, 255, 255)          # white
     pdf.rect(0, 0, 210, 297, style="F")
 
     # ── Decorative border ───────────────────────────────────────────────────
