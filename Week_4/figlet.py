@@ -8,18 +8,16 @@ figlet = Figlet()
 if len(sys.argv) == 1:
     # if no font is specified, choose a random font
     f = random.choice(figlet.getFonts())
+    figlet.setFont(font=f)
 elif len(sys.argv) == 3 and (sys.argv[1] == "-f" or sys.argv[1] == "--font"):
     # if a font is specified, use it
     f = sys.argv[2]
     # check font validity
     if f not in figlet.getFonts():
-        print("Invalid font")
-        sys.exit()
-    else:
-        figlet.setFont(font=f)
+        sys.exit("Invalid font")
+    figlet.setFont(font=f)
 else:
-    print("Invalid usage")
-    sys.exit()
+    sys.exit("Invalid usage")
 
 u_input = input("Input: ")
 print("Output:", figlet.renderText(u_input))
