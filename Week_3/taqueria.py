@@ -9,9 +9,7 @@ def main():
         "Super Quesadilla": 9.50,
         "Taco": 3.00,
         "Tortilla": 2.00}
-    for i in d:
-        print(f"{i}: ${d[i]:.2f}")
-    print("\n")
+    
     menu(d)
         
 def menu(d):
