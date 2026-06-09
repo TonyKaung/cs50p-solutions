@@ -1,21 +1,18 @@
 def convert(time):
     hours, minutes = time.split(":")
-    hours = int(hours)
-    minutes = int(minutes)
-    return f"{hours}:{minutes/60:.2f}"
+    return int(hours) + (int(minutes) / 60)
 
 
 def main():
     time = input("What time is it? ")
     converted_time = convert(time)
-    if(converted_time >= "7:00" and converted_time <= "8:00"):
+    if 7 <= converted_time <= 8:
         print("breakfast time")
-    elif(converted_time >= "12:00" and converted_time <= "13:00"):
+    elif 12 <= converted_time <= 13:
         print("lunch time")
-    elif(converted_time >= "18:00" and converted_time <= "19:00"):
+    elif 18 <= converted_time <= 19:
         print("dinner time")
-    elif("0:00" > converted_time or converted_time > "23:59"):
-        print("Invalid time")
+
 
 if __name__ == "__main__":
     main()
