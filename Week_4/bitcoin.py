@@ -15,7 +15,7 @@ except ValueError:
 
 # get current price of bitcoin in USD
 try:
-    response = requests.get("https://rest.coincap.io/v3/assets/bitcoin?apiKey=6bb407337027939a8c49896da777fcc2ba40ec123e01f56bdeede1a1ff618f15")
+    response = requests.get("https://rest.coincap.io/v3/assets/bitcoin?apiKey=YOUR_API_KEY")
     data = response.json()
     price = float(data["data"]["priceUsd"])
     price *= n
