@@ -1,5 +1,6 @@
 word = input("Input: ")
+result = []
 for i in word:
-    if i.lower() in "aeiou":
-        word = word.replace(i, "")
-print("Output:", word)
+    if i.lower() not in "aeiou":
+        result.append(i)
+print("Output:", "".join(result))
