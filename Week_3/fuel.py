@@ -9,18 +9,17 @@ def fuel(u_input):
         x, y = u_input.split("/")
         x = int(x)
         y = int(y)
-        z = round (x/y * 100)
-        if z < 0 or z > 100:
+        if x > y:
             raise ValueError
-        elif z <= 1:
+        z = round(x / y * 100)
+        if z <= 1:
             print("E")
         elif z >= 99:
             print("F")
-    except(ValueError, ZeroDivisionError):
-        print("Invalid input")
-        return False
-    else:
-        print(f"{z}%")
+        else:
+            print(f"{z}%")
         return True
+    except (ValueError, ZeroDivisionError):
+        return False
 
 main()
