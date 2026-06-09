@@ -23,5 +23,3 @@ for fruit in fruits:
     if ans == fruit["name"]:
         print(f"Calories: {fruit['calories']}")
         break
-else:
-    print("Fruit not found.")
