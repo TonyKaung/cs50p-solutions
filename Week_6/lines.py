@@ -10,12 +10,16 @@ def main():
         sys.exit()
 
     count = 0
-    with open(sys.argv[1]) as read_file:
-        # go through each line and skip comments and blank lines
-        for line in read_file:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                count += 1
+    try:
+        with open(sys.argv[1]) as read_file:
+            # go through each line and skip comments and blank lines
+            for line in read_file:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    count += 1
+    except FileNotFoundError:
+        sys.exit("File does not exist")
+    
     print(count)
 
 if __name__ == "__main__":
